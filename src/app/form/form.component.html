@@ -1,0 +1,28 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <p>form works!</p> -->
+
+<div class="container">
+    <h1>Principal Interest Calculator</h1>
+    <form id="calculator-form" [formGroup]="principleInterst" (ngSubmit)="onSubmit()">
+        <label for="principal">Principal:</label>
+        <input type="number" id="principal" name="principal" formControlName="principal" step="0.01">
+        <label for="rate">Rate (%):</label>
+        <input type="number" id="rate" formControlName="rate" name="rate" step="0.01">
+        <label for="time">Time (years):</label>
+        <input type="number" id="time" formControlName="time" name="time" step="0.01">
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="result">
+
+          <p>{{result}}</p>
+         
+    </div>
+</div>
+    
+
+</body>
